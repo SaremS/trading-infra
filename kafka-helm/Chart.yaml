@@ -1,5 +1,5 @@
 apiVersion: v2
-name: helm-chart
+name: kafka
 description: Kafka setup
 type: application
 version: 0.1.0
