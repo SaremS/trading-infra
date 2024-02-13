@@ -1,0 +1,10 @@
+apiVersion: v2
+name: helm-chart
+description: Kafka setup
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+dependencies:
+- name: kafka
+  version: 26.8.5
+  repository: "oci://registry-1.docker.io/bitnamicharts"
