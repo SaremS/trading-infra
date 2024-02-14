@@ -25,6 +25,7 @@ jobs:
       
       - name: Package Helm Chart
         run: |
+          helm dependency update
           helm package . --destination .deploy
       
       - name: Publish Helm Chart
