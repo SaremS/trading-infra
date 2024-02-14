@@ -1,0 +1,38 @@
+name: Release Helm Chart
+
+on:
+  push:
+    branches:
+      - master  # Trigger the workflow on push events to the main branch.
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "${GITHUB_ACTOR}@bots.github.com"
+      
+      - name: Install Helm
+        run: |
+          curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+          chmod 700 get_helm.sh
+          ./get_helm.sh
+      
+      - name: Package Helm Chart
+        run: |
+          helm package . --destination .deploy
+      
+      - name: Publish Helm Chart
+        run: |
+          git fetch origin gh-pages:gh-pages
+          git checkout gh-pages
+          helm repo index .deploy --url https://<username>.github.io/<repository>/
+          mv .deploy/* .
+          git add .
+          git commit -m "Publish Helm chart"
+          git push origin gh-pages
