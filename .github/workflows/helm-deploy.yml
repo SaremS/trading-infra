@@ -32,7 +32,7 @@ jobs:
         run: |
           git fetch origin gh-pages:gh-pages
           git checkout gh-pages
-          helm repo index .deploy --url https://sarems.github.io/trading-infra/
+          helm repo index .deploy
           mv .deploy/* .
           git add .
           git commit -m "Publish Helm chart"
