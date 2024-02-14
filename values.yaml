@@ -2,5 +2,9 @@ kafka:
   listeners:
     client:
       protocol: PLAINTEXT
-    interbroker:
-  protocol: PLAINTEXT
+  interbroker:
+    protocol: PLAINTEXT
+  persistence:
+    enabled: true
+    storageClass: "longhorn"  
+    size: 5Gi
