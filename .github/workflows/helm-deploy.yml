@@ -19,6 +19,7 @@ jobs:
 
       - name: Pull origin
         run: |
+          git config pull.rebase false
           git checkout -b gh-pages
           git pull origin gh-pages
       
