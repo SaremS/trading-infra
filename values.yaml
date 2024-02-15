@@ -4,3 +4,7 @@ kafka:
       protocol: PLAINTEXT
   interbroker:
     protocol: PLAINTEXT
+  persistence:
+    enabled: true
+    storageClass: "longhorn"  
+    size: 5Gi
