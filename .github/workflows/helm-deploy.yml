@@ -21,7 +21,7 @@ jobs:
         run: |
           git config pull.rebase false
           git checkout -b gh-pages
-          git pull origin gh-pages
+          git pull origin gh-pages --allow-unrelated-histories
       
       - name: Install Helm
         run: |
@@ -40,4 +40,4 @@ jobs:
           mv .deploy/* .
           git add .
           git commit -m "Publish Helm chart"
-          git push origin gh-pages
+          git push origin gh-pages --allow-unrelated-histories
