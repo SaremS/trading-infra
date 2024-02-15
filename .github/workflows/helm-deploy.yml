@@ -40,4 +40,4 @@ jobs:
           mv .deploy/* .
           git add .
           git commit -m "Publish Helm chart"
-          git push origin gh-pages --allow-unrelated-histories
+          git push origin gh-pages
