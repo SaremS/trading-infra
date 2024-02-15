@@ -30,9 +30,7 @@ jobs:
       
       - name: Publish Helm Chart
         run: |
-          git stash push -u
-          git fetch origin gh-pages:gh-pages
-          git checkout gh-pages
+          git checkout -b gh-pages
           helm repo index .deploy --url https://sarems.github.io/trading-infra/
           mv .deploy/* .
           git add .
