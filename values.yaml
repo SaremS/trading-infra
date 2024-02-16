@@ -1,1 +1,11 @@
+postgresql:
+  postgresqlPassword: "password"
+  redis:
+    password: "password"
+  auth:
+    password: "password"
+minio:
+  auth:
+    rootUser: admin
+    rootPassword: "admin"
 
