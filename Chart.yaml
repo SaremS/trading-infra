@@ -2,9 +2,13 @@ apiVersion: v2
 name: trading-infra
 description: For stock trading/analysis
 type: application
-version: 0.1.0
+version: 0.2.0
 appVersion: "1.0.0"
 dependencies:
 - name: kafka
   version: 26.8.1
   repository: "oci://registry-1.docker.io/bitnamicharts"
+- name: airflow
+  version: 1.12.0
+  repository: "oci://registry-1.docker.io/bitnamicharts"
+  
