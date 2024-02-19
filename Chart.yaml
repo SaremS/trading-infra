@@ -11,3 +11,6 @@ dependencies:
 - name: minio
   version: 13.4.5
   repository: "oci://registry-1.docker.io/bitnamicharts"
+- name: gitlab
+  version: 16.9.0-ce.0
+  repository: "oci://registry-1.docker.io/bitnamicharts"
