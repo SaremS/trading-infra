@@ -6,6 +6,6 @@ airflow:
     password: "password"
 minio:
   auth:
-    rootUser: admin
+    rootUser: "admin"
     rootPassword: "admin"
 
