@@ -1,4 +1,4 @@
-postgresql:
+airflow:
   postgresqlPassword: "password"
   redis:
     password: "password"
