@@ -1,6 +1,8 @@
 airflow:
-  postgresqlPassword: "password"
   redis:
     password: "password"
+  auth:
+    password: "password"
+postgresql:
   auth:
     password: "password"
