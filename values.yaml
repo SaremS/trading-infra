@@ -1,11 +1,3 @@
-airflow:
-  redis:
-    password: "password"
-  auth:
-    password: "password"
-  postgresql:
-    auth:
-      password: "password"
 keycloak:
   service:
     type: "LoadBalancer"
