@@ -8,4 +8,4 @@ airflow:
       password: "password"
 keycloak:
   service:
-    type: "Ingress"
+    type: "LoadBalancer"
