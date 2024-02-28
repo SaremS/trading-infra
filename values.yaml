@@ -3,9 +3,9 @@ keycloak:
     type: "LoadBalancer"
     loadBalancerIP: "192.168.1.250"
   auth:
-    adminPassword: <secret:secret/trading-infra~kc_adminpass>
+    adminPassword: <vault:secret/trading-infra~kc_adminpass>
   externalDatabase:
-    password: <secret:secret/trading-infra~kc_dbpass>
+    password: <vault:secret/trading-infra~kc_dbpass>
   postgresql:
     auth:
-      password: <secret:secret/trading-infra~kc_dbpass>
+      password: <vault:secret/trading-infra~kc_dbpass>
